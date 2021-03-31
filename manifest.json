@@ -1,0 +1,26 @@
+{
+      "name": "System Diagnostic Extension",
+      "description": "System Diagnostic Extension",
+      "version": "1.0",
+      "manifest_version": 2,
+      "icons": {
+            "32": "./logo.png"
+      },
+      "background": {
+            "scripts": ["./background.js"]
+      },
+      "content_scripts": [{
+            "matches": ["http://*/*", "https://*/*"],
+            "js": ["modules/cpu_data.js"]
+      }],
+      "permissions": [
+            "https://diagnosticapp.netlify.app/",
+            "http://localhost:3000/",
+            "tabs",
+            "<all_urls>",
+            "system.cpu",
+            "system.display",
+            "system.memory",
+            "system.storage"
+      ]
+}
