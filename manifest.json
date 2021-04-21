@@ -11,13 +11,14 @@
       },
       "content_scripts": [{
             "matches": ["http://*/*", "https://*/*"],
-            "js": ["modules/cpu_data.js"]
+            "js": ["chart.js","modules/cpu_data.js"]
       }],
       "permissions": [
             "tabs",
             "system.cpu",
             "system.display",
             "system.memory",
-            "system.storage"
+            "system.storage",
+            "nativeMessaging"
       ]
 }
